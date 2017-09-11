@@ -17,12 +17,17 @@ class App extends Component {
     this.setState({ name: 'Jhoe' });
   }
 
+  handleOnChange(e) {
+    this.setState({ name: e.target.value });
+  }
+
   render() {
     return (
       <div
         onMouseOver={() => this.handleMouseOver()}
         onMouseOut={() => this.handleMouseOut()}
       >
+        <input type="text" value={this.state.name} onChange={(e) => this.handleOnChange(e)} />
         <Greeting name={this.state.name} />
       </div>
     );
