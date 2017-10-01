@@ -6,6 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.handlePlaceSubmit = this.handlePlaceSubmit.bind(this);
   }
 
   handlePlaceSubmit(place) {
